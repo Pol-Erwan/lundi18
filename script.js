@@ -6,10 +6,8 @@ var edit = card.getElementsByClassName("btn")[1];
 var card2 = document.getElementsByClassName("card")[1];
 var edit2 = card2.getElementsByClassName("btn")[1];
 var link = document.querySelector("link");
-let image = document.querySelectorAll("img.card-img-top");
-var view = card.getElementsByClassName("btn")[0];
-var viewall = document.querySelectorAll("div.btn-group");
-
+var image = document.querySelectorAll("img.card-img-top");
+var view = document.querySelectorAll("button.btn-success");
 
 // fonction 1 //
 
@@ -68,21 +66,24 @@ navbar.ondblclick = Disabled;
 
 // fonction 6 //
 
+var pict = image && view;
 
+pict.forEach(b => {
+b.addEventListener("mouseover", View2);
+console.log(b);
 
-function View(){
+function View2(){
 
-image.forEach(a => {
-a.style.color = "red";
-if (a.style.width === "20%"){
-  a.style.width = "" ;
+if (b.style.width === "20%"){
+  b.style.width = "" ;
 } else {
-  a.style.width = "20%";
+  b.style.width = "20%";
 };
-});
+
 }
 
-view.addEventListener("mouseover", View);
+});
+
 
 
 
