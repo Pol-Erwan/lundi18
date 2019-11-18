@@ -41,7 +41,6 @@ if (card2.style.color === "green"){
 edit2.addEventListener("click", Edit2);
 
 function Disabled(){
-  console.log("disabled");
 
 if (link.disabled === true){
   link.disabled = false;
@@ -51,9 +50,6 @@ if (link.disabled === true){
 
 };
 
-//navbar.addEventListener("click", Fonction);
-//navbar.addEventListener("click", Disabled);
-//navbar.ondblclick = Fonction;
 navbar.ondblclick = Disabled;
 
 
