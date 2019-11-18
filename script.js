@@ -5,7 +5,7 @@ var card = document.getElementsByClassName("card")[0] ;
 var edit = card.getElementsByClassName("btn")[1];
 var card2 = document.getElementsByClassName("card")[1];
 var edit2 = card2.getElementsByClassName("btn")[1];
-var disabled = document.querySelector("link").disabled;
+var link = document.querySelector("link");
 
 var number = 1;
 
@@ -41,12 +41,21 @@ if (card2.style.color === "green"){
 edit2.addEventListener("click", Edit2);
 
 function Disabled(){
-}
+  console.log("disabled");
 
+if (link.disabled === true){
+  link.disabled = false;
+} else {
+  link.disabled = true;
+};
+
+};
 
 //navbar.addEventListener("click", Fonction);
-navbar.addEventListener("click", Disabled);
-navbar.ondblclick = function() { alert("Évènement dblclick détecté", Fonction); };
+//navbar.addEventListener("click", Disabled);
+//navbar.ondblclick = Fonction;
+navbar.ondblclick = Disabled;
+
 
 
 
